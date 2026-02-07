@@ -1,7 +1,5 @@
-import CounterApp from './components/CounterApp';
+import MainContainer from './components/MainContainer';
 
-function App() {
-  return <CounterApp />;
+export default function App() {
+  return <MainContainer />;
 }
-
-export default App;
