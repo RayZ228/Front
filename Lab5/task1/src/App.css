@@ -1,0 +1,30 @@
+import { UserCard } from './components/UserCard';
+import { SkillList } from './components/SkillList';
+import { User, Skill } from './types';
+
+const sampleUser: User = {
+  name: 'Alice',
+  email: 'alice@mail.com',
+  age: 25
+};
+
+const sampleSkills: Skill[] = [
+  { id: 1, name: 'React', level: 'Expert' },
+  { id: 2, name: 'TypeScript', level: 'Intermediate' },
+  { id: 3, name: 'Node.js', level: 'Beginner' }
+];
+
+function App() {
+  return (
+    <div>
+      <h1>User Profile</h1>
+      <UserCard user={sampleUser} isActive={true}>
+        <p>Status: Active member</p>
+        <h3>Skills:</h3>
+        <SkillList skills={sampleSkills} />
+      </UserCard>
+    </div>
+  );
+}
+
+export default App;
